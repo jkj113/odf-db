@@ -13,8 +13,8 @@ import osf.food.vo.FoodVO;
 public class FoodDAOImpl implements FoodDAO {
 
 	@Override
-	public List<FoodVO> selectFoodList(FoodVO sFood) {
-		String sql = " select food_num, food_name, food_price from food where 1 = 1";
+	public List<FoodVO> selectFoodList(FoodVO sFood) { //select 검색조건
+		String sql = " select food_num, food_name, food_price from food where 1 = 1";  //무조건 참값. 뒤에 조건절을 붙이 위해서 1=1
 		if(sFood != null) {
 			if(sFood.getFoodName()!= null) {  //다이나믹 => 위에서 끝날 수도 있고 사용자의 요청에 따라 밑으로 내려 올 수도 있다.
 				sql += " and food_name = ?";
