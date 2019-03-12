@@ -53,29 +53,29 @@ public class FoodServiceImpl implements FoodService {
 		List<FoodVO> foodList = fs.selectFoodList(null);
 		System.out.println(foodList);
 		FoodVO food = new FoodVO();
-		food.setFoodName("참치");
-		foodList = fs.selectFoodList(food);
-		System.out.println(foodList);
-
-		food.setFoodNum(1);
-		int cnt = 0;
-		try {
-			cnt = fs.deleteFood(food);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		System.out.println("삭제 건 수 : " + cnt);
-
-//		food.setFoodNum(5);
-//		food.setFoodName("연어초밥");
-//		food.setFoodPrice(300);
+//		food.setFoodName("참치");
+//		foodList = fs.selectFoodList(food);
+//		System.out.println(foodList);
+//
+//		food.setFoodNum(1);
 //		int cnt = 0;
 //		try {
-//			cnt = fs.updateFood(food);
+//			cnt = fs.deleteFood(food);
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
-//		System.out.println("업데이트 건 수 : " + cnt);
+//		System.out.println("삭제 건 수 : " + cnt);
+
+		food.setFoodNum(5);
+		food.setFoodName("연어초밥");
+		food.setFoodPrice(300);
+		int cnt = 0;
+		try {
+			cnt = fs.updateFood(food);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("업데이트 건 수 : " + cnt);
 //
 //		food.setFoodName("참치초밥");
 //		food.setFoodPrice(30000);
