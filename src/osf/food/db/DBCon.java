@@ -28,7 +28,7 @@ public class DBCon {
   public static Connection getCon() {
 	  if(con==null) {
 		  if(open()) {
-			  return con;
+			  return con;  //다른 클래스에서 사용하기 위해서. private로 open해 줬으니까
 		  }
 	  }
 	  return null;
